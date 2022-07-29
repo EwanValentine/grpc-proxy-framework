@@ -1,0 +1,12 @@
+routes:
+  /api/v1/hello/:name:
+    name: "service.Greeter"
+    method: "SayHello"
+    http_method: "GET"
+  /api/v1/users:
+    name: "service.Greeter"
+    method: "CreateUser"
+    http_method: "POST"
+
+connections:
+  service.Greeter: "localhost:8888"

@@ -1,0 +1,32 @@
+syntax = "proto3";
+
+option go_package = "proxy-test/testservice/service";
+
+package service;
+
+service Greeter {
+  rpc SayHello (HelloRequest) returns (HelloReply) {}
+  rpc CreateUser (UserRequest) returns (UserResponse) {}
+}
+
+message User {
+  string name = 1;
+}
+
+message UserRequest {
+  User user = 1;
+}
+
+message UserResponse {
+  string name = 1;
+}
+
+// The request message containing the user's name.
+message HelloRequest {
+  string name = 1;
+}
+
+// The response message containing the greetings
+message HelloReply {
+  string message = 1;
+}
